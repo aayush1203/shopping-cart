@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- <title>shopping cart</title> -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	</head>
+	<body>
+		<div class="container-fluid" style="height: 100vw">
+			<img src="https://static9.depositphotos.com/1154062/1215/v/950/depositphotos_12157783-stock-illustration-grey-crumpled-abstract-background.jpg" style="width: 100%;height: 100%;opacity: 0.35">
+		<div class="container-fluid" style="position: absolute;top: 0;left :0;width: 100%;overflow-y: scroll;height: 100vw">
+		<h1 class="text-center" style="font-size: 4vw;background-color: #bab7a8;padding: 2vw;">ADD ITEMS TO YOUR SITE</h1>
+
+			<form action='/' method="post" class="text-center" style="padding: 2vw;font-size: 1.1vw">
+				<input type="text" name="product" id="product" onfocus="this.value= ''" value='Enter Name'>
+				<input type="text" name="price" id="price" onfocus="this.value= ''" value='Enter Price'>
+				<input type="text" name="quantity" id="quantity" onfocus="this.value= ''" value='Enter Quantity'>
+				<input type="text" name="pID" id="pID" onfocus="this.value= ''" value='Enter Product ID'>
+				<input type="text" name="purl" id="purl" onfocus="this.value= ''" value='Enter Image url'>
+				<input type="submit" value="ADD">
+			</form>	
+			
+			<div class="text-center" style="font-size: 2.2vw;padding: 2vw;"><a href="page2"><u>Want to ADD item to cart</u></a></div>
+			<table class="table table-hover" style="font-size: 1.2vw">
+				<thead>
+					<tr>
+						<th style="text-align: center;">Image</th>
+						<th style="text-align: center;">Item name</th>
+						<th style="text-align: center;">Price</th>
+						<th style="text-align: center;">Quantity</th>
+						<th style="text-align: center;">Product ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each items as |item|}}
+					<tr style="text-align: center;">
+						<td><img src="{{item.purl}}" class="img-rounded" style="max-width: 5vw;max-height: 5vw"></td>
+						<td style="background-color: #eaece5">{{item.product}}</td>
+						<td>{{item.price}}</td>
+						<td style="background-color: #eaece5">{{item.quantity}}</td>
+						<td>{{item.pID}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+	</div>
+	</div>
+	</body>
+</html>			

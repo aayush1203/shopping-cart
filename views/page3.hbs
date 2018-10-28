@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- <title>shopping cart</title> -->
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	</head>
+	<body>
+		<div class="container-fluid" style="height: 100vw">
+		<img src="https://previews.123rf.com/images/akhilesh/akhilesh1612/akhilesh161200004/70900087-new-indian-rupee-2000-currency-note-after-demonitization.jpg" style="width: 100%;height: 100%;opacity: 0.3">
+		<div class="container-fluid" style="position: absolute;top: 0;left :0;width: 100%;height: 100vw;overflow-y: scroll;">
+			<h1 class="text-center" style="font-size: 4vw;background-color: #bab7a8;padding: 2vw;">YOUR CART</h1>
+
+			<table class="table table-hover" style="font-size: 1.2vw">
+				<thead>
+					<tr>
+						<th>Item name</th>
+						<th>Price</th>
+						<th>Product ID</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each carts as |cart|}}
+					<tr>
+						<td>{{cart.product}}</td>
+						<td>{{cart.price}}</td>
+						<td>{{cart.pID}}</td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+
+			<h3 class="text-center" style="font-size: 2.5vw;padding: 2vw;">TOTAL PAYABLE AMOUNT </h3>
+			{{#each carts as |cart|}}
+			<span style="font-size: 1.8vw;text-align: center;">{{cart.price}} + </span>
+			{{/each}}
+	</div>
+	</body>
+</html>			
