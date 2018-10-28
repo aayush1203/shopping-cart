@@ -1,0 +1,26 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aayush1203/shopping_cart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aayush1203/shopping_cart/issues"
+  },
+  "homepage": "https://github.com/aayush1203/shopping_cart#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "sequelize": "^4.41.0",
+    "sqlite3": "^4.0.3"
+  }
+}
